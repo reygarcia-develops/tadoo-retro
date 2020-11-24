@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RetroBoardComponent } from './retro-dashboard.component';
+import { RetroDashboardComponent } from './retro-dashboard.component';
 
 describe('RetroBoardComponent', () => {
-  let component: RetroBoardComponent;
-  let fixture: ComponentFixture<RetroBoardComponent>;
+  let component: RetroDashboardComponent;
+  let fixture: ComponentFixture<RetroDashboardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [RetroBoardComponent]
+      declarations: [RetroDashboardComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RetroBoardComponent);
+    fixture = TestBed.createComponent(RetroDashboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

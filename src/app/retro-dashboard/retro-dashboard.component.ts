@@ -10,7 +10,7 @@ import { TeamBoard, TEAM_BOARDS } from './retro-dashboard.models';
 
 export class RetroDashboardComponent implements OnInit {
   @ViewChild(MatAccordion) 
-  accordion: MatAccordion;
+  accordian: MatAccordion;
 
   teamBoards: TeamBoard[] = [];
   constructor() { }
@@ -18,7 +18,6 @@ export class RetroDashboardComponent implements OnInit {
   ngOnInit(): void {
     this.teamBoards = TEAM_BOARDS;
     this.setBarChartData();
-
   }
   //TODO THIS SHOULD BE SET IN THE FRONT END ON THIS OBJECT
   setBarChartData() {

@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RetroDashboardModule } from './retro-dashboard/retro-dashboard.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
+    AppRoutingModule,
+    BrowserAnimationsModule,
     BrowserModule,
-    AppRoutingModule
+    RetroDashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

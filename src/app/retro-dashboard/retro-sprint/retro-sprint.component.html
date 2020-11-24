@@ -1,0 +1,28 @@
+<div class="retro-dashboard-container">
+  <mat-card *ngFor="let board of boards">
+    <mat-card-header>
+      <mat-card-title>
+        {{board.name}}
+      </mat-card-title>
+      <mat-card-subtitle>
+        <div class="subtitle-date">
+          <span>
+            <mat-icon aria-hidden="false" aria-label="Example home icon">date_range</mat-icon>
+          </span>
+          <span>
+            {{board.createdAt}}
+          </span>
+        </div>
+        <!-- set this in backend -->
+        <div>
+          {{board.cardCount}} cards
+        </div>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <ngx-charts-bar-vertical [view]="view" [scheme]="colorScheme" [results]="board.chartData" [gradient]="gradient">
+      </ngx-charts-bar-vertical>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,18 @@
+<div class="retro-dashboard-container">
+  <div class="accordian-actions-container">
+    <button mat-raised-button color="primary" (click)="accordion.openAll()">Expand All</button>
+    <button mat-raised-button color="accent" (click)="accordion.closeAll()">Collapse All</button>
+  </div>
+  <div class="accordian-container" *ngFor="let teamBoard of teamBoards">
+    <mat-accordion multi>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{teamBoard.name}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-retro-sprint [boards]="teamBoard.boards"></app-retro-sprint>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

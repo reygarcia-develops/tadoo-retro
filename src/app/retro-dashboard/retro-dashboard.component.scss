@@ -1,0 +1,22 @@
+.retro-dashboard-container {
+  margin: 3em;
+
+  .accordian-actions-container {
+    padding-bottom: 20px;
+
+    button {
+      opacity: .8;
+      &:not(:first-of-type) {
+        margin-left: 20px;
+      }
+      &:hover {
+        cursor: pointer;
+        opacity: 1;
+      }
+    }
+  }
+
+  .accordian-container {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.1);
+  }
+}

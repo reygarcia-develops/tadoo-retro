@@ -1,5 +1,5 @@
-<div class="retro-dashboard-container">
-  <mat-card *ngFor="let board of boards">
+<div class="retro-sprint-container">
+  <mat-card *ngFor="let board of boards" (click)="_navigateToBoard(board)">
     <mat-card-header>
       <mat-card-title>
         {{board.name}}
@@ -7,13 +7,13 @@
       <mat-card-subtitle>
         <div class="subtitle-date">
           <span>
-            <mat-icon aria-hidden="false" aria-label="Example home icon">date_range</mat-icon>
+            <mat-icon aria-hidden="false" aria-label="Created At">date_range</mat-icon>
           </span>
           <span>
             {{board.createdAt}}
           </span>
         </div>
-        <!-- set this in backend -->
+        <!-- TODO set this in backend -->
         <div>
           {{board.cardCount}} cards
         </div>
@@ -21,8 +21,13 @@
     </mat-card-header>
     <mat-divider></mat-divider>
     <mat-card-content>
+      <!-- TODO known buck when clicking back button size of bars gets smaller and smaller -->
       <ngx-charts-bar-vertical [view]="view" [scheme]="colorScheme" [results]="board.chartData" [gradient]="gradient">
       </ngx-charts-bar-vertical>
     </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-actions>
+      <mat-icon aria-hidden="false" aria-label="Download">download</mat-icon>
+    </mat-card-actions>
   </mat-card>
 </div>

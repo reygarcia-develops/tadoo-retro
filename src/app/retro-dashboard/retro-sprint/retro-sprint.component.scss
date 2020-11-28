@@ -1,4 +1,4 @@
-.retro-dashboard-container {
+.retro-sprint-container {
   align-items: center;
   background-color: #f1f1f1;
   border-radius: 3px;
@@ -48,6 +48,17 @@
       transform: rotate(180deg) scaleX(-1);
     }
 
+    mat-card-actions {
+      text-align: right;
+      mat-icon {
+        color: rgba(0, 0, 0, 0.54);
+
+        &:hover {
+          color:#68c8ff;
+        }
+      }
+    }
+
     &:hover {
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
       cursor: pointer;
@@ -58,7 +69,7 @@
   }
 }
 @media (min-width: 750px) {
-  .retro-dashboard-container {
+  .retro-sprint-container {
     flex-direction: row;
     justify-content: left;
 

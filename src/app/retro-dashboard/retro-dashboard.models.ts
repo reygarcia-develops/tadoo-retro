@@ -4,6 +4,7 @@ export interface TeamBoard {
 }
 
 export interface Board {
+    id: number;
     cardCount: number;
     chartData: ChartData[];
     columns: BoardColumn[];
@@ -29,6 +30,7 @@ export interface ChartData {
 
 export const BOARDS: Board[] = [
     {
+        id: 1,
         cardCount: 0,
         chartData: [],
         columns: [
@@ -79,6 +81,7 @@ export const BOARDS: Board[] = [
         name: 'Sprint Boreas'
     },
     {
+        id: 2,
         cardCount: 0,
         chartData: [],
         columns: [

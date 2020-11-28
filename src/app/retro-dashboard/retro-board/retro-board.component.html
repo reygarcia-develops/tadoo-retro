@@ -1,0 +1,11 @@
+<div class="retro-board-container" *ngIf="board">
+  <h2>{{board.name}}</h2>
+  <div cdkDropListGroup>
+    <div class="example-container" *ngFor="let column of board.columns; index as indexOfelement;">
+      <div class="example-list" cdkDropList [cdkDropListData]="column.cards" class="example-list"
+        (cdkDropListDropped)="_drop($event)">
+        <div class="example-box" *ngFor="let card of column.cards" cdkDrag>{{card.description}}</div>
+      </div>
+    </div>
+  </div>
+</div>

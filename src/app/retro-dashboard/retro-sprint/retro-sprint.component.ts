@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Board, BoardColumn } from '../retro-dashboard.models';
 
 @Component({
@@ -36,9 +37,13 @@ export class RetroSprintComponent implements OnInit {
     ]
   };
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
 
+  }
+  
+  _navigateToBoard(board: Board) {
+    this.router.navigate(['/boards', board.id]);
   }
 }

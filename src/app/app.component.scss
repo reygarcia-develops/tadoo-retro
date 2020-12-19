@@ -21,6 +21,11 @@ p {
     margin: 0;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 .spacer {
     flex: 1;
 }
@@ -50,10 +55,6 @@ p {
             outline: none;
         }
     }
-}
-
-.content {
-    margin: 3em;
 }
 
 svg.material-icons {

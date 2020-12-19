@@ -1,10 +1,16 @@
 <div class="retro-board-container" *ngIf="board">
-  <h2>{{board.name}}</h2>
-  <div cdkDropListGroup>
-    <div class="example-container" *ngFor="let column of board.columns; index as indexOfelement;">
-      <div class="example-list" cdkDropList [cdkDropListData]="column.cards" class="example-list"
-        (cdkDropListDropped)="_drop($event)">
-        <div class="example-box" *ngFor="let card of column.cards" cdkDrag>{{card.description}}</div>
+  <h2 class="board-name">{{board.name}}</h2>
+  <div cdkDropListGroup class="column-group-container">
+    <div class="column-container">
+      <div class="column" *ngFor="let column of board.columns">
+        <div class="column-title">
+          {{column.name}}
+        </div>
+        <div class="column-content" cdkDropList [cdkDropListData]="column.cards" (cdkDropListDropped)="_drop($event)">
+          <div class="card-container">
+            <div class="card" *ngFor="let card of column.cards" cdkDrag>{{card.description}}</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
